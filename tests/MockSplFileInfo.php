@@ -22,17 +22,17 @@ class MockSplFileInfo extends \hanneskod\classtools\Iterator\SplFileInfo
         unlink($this->path);
     }
 
-    public function getPathname()
+    public function getPathname(): string
     {
         return $this->path;
     }
 
-    public function getRealPath()
+    public function getRealPath(): string
     {
         return $this->path;
     }
 
-    public function getContents()
+    public function getContents(): string
     {
         return $this->contents;
     }

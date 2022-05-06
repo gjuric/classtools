@@ -34,7 +34,7 @@ final class NotFilter extends ClassIterator implements Filter
         $this->filter = $filter;
     }
 
-    public function getIterator(): iterable
+    public function getIterator(): \Traversable
     {
         $filtered = iterator_to_array($this->filter->getIterator());
         foreach ($this->getBoundIterator() as $className => $reflectedClass) {

@@ -76,10 +76,8 @@ class SplFileInfo extends FinderSplFileInfo
 
     /**
      * Returns the contents of the file
-     *
-     * @return string
      */
-    public function getContents()
+    public function getContents(): string
     {
         return (string)$this->decorated->getContents();
     }
@@ -153,7 +151,7 @@ class SplFileInfo extends FinderSplFileInfo
     /**
      * Gets the target of a filesystem link
      */
-    public function getLinkTarget(): sring
+    public function getLinkTarget(): string|false
     {
         return $this->decorated->getLinkTarget();
     }
@@ -194,10 +192,8 @@ class SplFileInfo extends FinderSplFileInfo
 
     /**
      * Returns the path to the file
-     *
-     * @return string
      */
-    public function getPathname()
+    public function getPathname(): string
     {
         return $this->decorated->getPathname();
     }
@@ -212,10 +208,8 @@ class SplFileInfo extends FinderSplFileInfo
 
     /**
      * Expands all symbolic links and resolves relative references
-     *
-     * @return string
      */
-    public function getRealPath()
+    public function getRealPath(): string|false
     {
         return $this->decorated->getRealPath();
     }
@@ -290,9 +284,8 @@ class SplFileInfo extends FinderSplFileInfo
      * @param  string   $open_mode
      * @param  boolean  $use_include_path
      * @param  resource $context
-     * @return \SplFileObject
      */
-    public function openFile($open_mode = "r", $use_include_path = false, $context = null)
+    public function openFile($open_mode = "r", $use_include_path = false, $context = null): \SplFileObject
     {
         return $this->decorated->openFile($open_mode, $use_include_path, $context);
     }
@@ -301,9 +294,8 @@ class SplFileInfo extends FinderSplFileInfo
      * Set the class name which will be used to open files when openFile() is called
      *
      * @param  string $class_name
-     * @return void
      */
-    public function setFileClass($class_name = '')
+    public function setFileClass($class_name = ''): void
     {
         $this->decorated->setFileClass($class_name);
     }
@@ -312,9 +304,8 @@ class SplFileInfo extends FinderSplFileInfo
      * Set the class name which will be used when getFileInfo and getPathInfo are called
      *
      * @param  string $class_name
-     * @return void
      */
-    public function setInfoClass($class_name = '')
+    public function setInfoClass($class_name = ''): void
     {
         $this->decorated->setInfoClass($class_name);
     }

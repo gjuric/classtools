@@ -36,7 +36,7 @@ final class CacheFilter extends ClassIterator implements Filter
         parent::__construct();
     }
 
-    public function getIterator(): iterable
+    public function getIterator(): \Traversable
     {
         if (!isset($this->cache)) {
             $this->cache = new \ArrayIterator(iterator_to_array($this->getBoundIterator()));

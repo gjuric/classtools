@@ -60,5 +60,5 @@ trait FilterTrait
     /**
      * Get current iterator
      */
-    abstract public function getIterator(): iterable;
+    abstract public function getIterator(): \Traversable;
 }

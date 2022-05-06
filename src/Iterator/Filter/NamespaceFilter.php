@@ -38,7 +38,7 @@ final class NamespaceFilter extends ClassIterator implements Filter
         $this->namespace = new Name((string)$namespace);
     }
 
-    public function getIterator(): iterable
+    public function getIterator(): \Traversable
     {
         foreach ($this->getBoundIterator() as $className => $reflectedClass) {
             if ((new Name($className))->inNamespace($this->namespace)) {

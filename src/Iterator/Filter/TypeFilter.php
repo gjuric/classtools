@@ -35,7 +35,7 @@ final class TypeFilter extends ClassIterator implements Filter
         $this->typename = $typename;
     }
 
-    public function getIterator(): iterable
+    public function getIterator(): \Traversable
     {
         foreach ($this->getBoundIterator() as $className => $reflectedClass) {
             try {

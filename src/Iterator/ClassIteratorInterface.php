@@ -47,7 +47,7 @@ interface ClassIteratorInterface extends \IteratorAggregate
     /**
      * Iterator yields classnames as keys and ReflectionClass objects as values
      */
-    public function getIterator(): iterable;
+    public function getIterator(): \Traversable;
 
     /**
      * Filter this iterator

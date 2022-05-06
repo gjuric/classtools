@@ -95,7 +95,7 @@ class ClassIterator implements ClassIteratorInterface
         }
     }
 
-    public function getIterator(): iterable
+    public function getIterator(): \Traversable
     {
         /** @var SplFileInfo $fileInfo */
         foreach ($this->getClassMap() as $name => $fileInfo) {
