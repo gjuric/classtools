@@ -54,7 +54,7 @@ class Reader
     {
         if (is_null($parser)) {
             $parserFactory = new ParserFactory();
-            $parser = $parserFactory->create(ParserFactory::PREFER_PHP5);
+            $parser = $parserFactory->createForHostVersion();
         }
 
         try {
